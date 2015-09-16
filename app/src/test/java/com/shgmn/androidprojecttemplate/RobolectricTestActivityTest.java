@@ -15,7 +15,7 @@ import static org.robolectric.Shadows.shadowOf;
  * Created by shigemoto.takuya on 2015/09/11.
  */
 @RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 21)
+@Config(constants = BuildConfig.class, sdk = 22)
 public class RobolectricTestActivityTest {
 
     @Test
