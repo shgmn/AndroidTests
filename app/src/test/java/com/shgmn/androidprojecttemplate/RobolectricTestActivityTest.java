@@ -1,5 +1,6 @@
 package com.shgmn.androidprojecttemplate;
 
+import android.os.Build;
 import android.widget.TextView;
 
 import org.junit.Test;
@@ -15,7 +16,7 @@ import static org.robolectric.Shadows.shadowOf;
  * Created by shigemoto.takuya on 2015/09/11.
  */
 @RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 21)
+@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 public class RobolectricTestActivityTest {
 
     @Test
