@@ -1,5 +1,9 @@
 # Built application files
 /*/build/
+build/
+
+# Javadoc files
+javadoc/
 
 # Crashlytics configuations
 com_crashlytics_export_strings.xml
@@ -13,8 +17,8 @@ local.properties
 # Signing files
 .signing/
 
-# Cache files
-cache.xml
+# Navigation cache files
+.navigation/
 
 # User-specific configurations
 .idea/libraries/
