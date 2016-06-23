@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Calendar;
+
 public class RobolectricTestActivity extends AppCompatActivity {
 
     @Override
@@ -34,4 +36,25 @@ public class RobolectricTestActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
+    int getCurrentMonthBad() {
+        Calendar calendar = Calendar.getInstance();
+        return calendar.get(Calendar.MONTH);
+    }
+
+
+
+
+    Calendar mCalendar = Calendar.getInstance();
+
+    int getCurrentMonthGood() {
+        Calendar calendar = mCalendar;
+        return calendar.get(Calendar.MONTH);
+    }
+
+
+    
 }

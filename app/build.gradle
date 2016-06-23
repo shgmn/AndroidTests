@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.shgmn.androidprojecttemplate"
         minSdkVersion 9
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
 
@@ -28,25 +28,15 @@ android {
 
 dependencies {
     // App's dependencies, including test
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.android.support:support-annotations:22.2.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:support-annotations:23.0.0'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:design:23.0.0'
 
-    // Testing-only dependencies
-    androidTestCompile 'com.android.support.test:runner:0.3'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
-    androidTestCompile ('com.android.support.test.espresso:espresso-contrib:2.2') {
-        // Resolved java.lang.NoClassDefFoundError: your.package.name.EspressoTargetActivity
-        // 'espresso-contrib' has already 'support-v4' package.
-        exclude group: 'com.android.support', module: 'support-v4'
-
-        // Resolved java.lang.IllegalAccessError: Class ref in pre-verified class resolved to unexpected implementation
-        // 'espresso-contrib' has already 'recyclerview-v7' package.
-        exclude group: 'com.android.support', module: 'recyclerview-v7'
-    }
-    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2'
-    testCompile 'org.robolectric:robolectric:3.0'
-    testCompile 'org.robolectric:shadows-support-v4:3.0'
     testCompile 'junit:junit:4.12'
-    testCompile 'org.assertj:assertj-core:1.7.0'
+    testCompile 'org.robolectric:robolectric:3.1'
+    testCompile 'org.robolectric:robolectric-shadows:3.1'
+    testCompile 'org.assertj:assertj-core:3.4.1'
+    testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
 }
